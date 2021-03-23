@@ -1,18 +1,3 @@
-$('#recipeCarousel').carousel({
-  interval: 10000
-})
 
-$('.carousel .carousel-item').each(function(){
-    var next = $(this).next();
-    if (!next.length) {
-    next = $(this).siblings(':first');
-    }
-    next.children(':first-child').clone().appendTo($(this));
-    
-    if (next.next().length>0) {
-    next.next().children(':first-child').clone().appendTo($(this));
-    }
-    else {
-      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-    }
-});
+
+$('#recipeCarousel').carousel({\n  interval: 10000\n})\n\n$('.carousel .carousel-item').each(function(){\n    var next = $(this).next();\n    if (!next.length) {\n    next = $(this).siblings(':first');\n    }\n    next.children(':first-child').clone().appendTo($(this));\n    \n    if (next.next().length>0) {\n    next.next().children(':first-child').clone().appendTo($(this));\n    }\n    else {\n      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));\n    }\n});\n"    
