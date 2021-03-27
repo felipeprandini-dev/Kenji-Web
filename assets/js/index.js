@@ -1,42 +1,18 @@
+// Developed at agap2
+// Based on:
+// http://www.codeply.com/go/s3I9ivCBYH/multi-carousel-single-slide-bootstrap-4
 
-$('#carouselExample').on('slide.bs.carousel', function (e) {
-
-  
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
-    var itemsPerSlide = 4;
-    var totalItems = $('.carousel-item').length;
-    
-    if (idx >= totalItems-(itemsPerSlide-1)) {
-        var it = itemsPerSlide - (totalItems - idx);
-        for (var i=0; i<it; i++) {
-            // append slides to end
-            if (e.direction=="left") {
-                $('.carousel-item').eq(i).appendTo('.carousel-inner');
-            }
-            else {
-                $('.carousel-item').eq(0).appendTo('.carousel-inner');
-            }
-        }
+$('.multi-item-carousel').on('slide.bs.carousel', function (e) {
+  let $e = $(e.relatedTarget),
+      itemsPerSlide = 3,
+      totalItems = $('.carousel-item', this).length,
+      $itemsContainer = $('.carousel-inner', this),
+      it = itemsPerSlide - (totalItems - $e.index());
+  if (it > 0) {
+    for (var i = 0; i < it; i++) {
+      $('.carousel-item', this).eq(e.direction == "left" ? i : 0).
+        // append slides to the end/beginning
+        appendTo($itemsContainer);
     }
+  }
 });
-
-
-  $('#carouselExample').carousel({ 
-                interval: 2000
-        });
-
-
-  $(document).ready(function() {
-/* show lightbox when clicking a thumbnail */
-    $('a.thumb').click(function(event){
-      event.preventDefault();
-      var content = $('.modal-body');
-      content.empty();
-        var title = $(this).attr("title");
-        $('.modal-title').html(title);        
-        content.html($(this).html());
-        $(".modal-profile").modal({show:true});
-    });
-
-  });
