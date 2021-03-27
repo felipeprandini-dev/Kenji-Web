@@ -1,42 +1,18 @@
-
-$('#carouselExample').on('slide.bs.carousel', function (e) {
-
-  
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
-    var itemsPerSlide = 4;
-    var totalItems = $('.carousel-item').length;
-    
-    if (idx >= totalItems-(itemsPerSlide-1)) {
-        var it = itemsPerSlide - (totalItems - idx);
-        for (var i=0; i<it; i++) {
-            // append slides to end
-            if (e.direction=="left") {
-                $('.carousel-item').eq(i).appendTo('.carousel-inner');
-            }
-            else {
-                $('.carousel-item').eq(0).appendTo('.carousel-inner');
-            }
-        }
-    }
-});
-
-
-  $('#carouselExample').carousel({ 
-                interval: 2000
-        });
-
-
-  $(document).ready(function() {
-/* show lightbox when clicking a thumbnail */
-    $('a.thumb').click(function(event){
-      event.preventDefault();
-      var content = $('.modal-body');
-      content.empty();
-        var title = $(this).attr("title");
-        $('.modal-title').html(title);        
-        content.html($(this).html());
-        $(".modal-profile").modal({show:true});
+jQuery("#quote-carousel").on('slide.bs.carousel', function (event, fromIndex, toIndex) {
+        
+        
+        var active  =   jQuery(event.target).find('.carousel-inner > .item.active');
+        var from    =   active.index();
+        var next    =   jQuery(event.relatedTarget);
+        var to_slide=   next.index();
+        
+        if (to_slide>2) {
+            var hide_slide = parseInt(to_slide) - 3;
+            jQuery('.carousel-indicators li[data-slide-to="'+to_slide+'"]').css({"display":"inline-block"});
+            jQuery('.carousel-indicators li[data-slide-to="'+hide_slide+'"]').css({"display":"none"});
+        } else{
+            var hide_slide = parseInt(to_slide) + 3;
+            jQuery('.carousel-indicators li[data-slide-to="'+to_slide+'"]').css({"display":"inline-block"});
+            jQuery('.carousel-indicators li[data-slide-to="'+hide_slide+'"]').css({"display":"none"});
+        } 
     });
-
-  });
