@@ -56,40 +56,42 @@
 		</div>	
 
 		<div class="container">
-  <div id="gallery" class="carousel slide" data-ride="carousel" data-interval="false">
-    <div class="carousel-inner row w-100 mx-auto" role="listbox">
-      <!-- Change col-md-x number in relation of the number of elements you want to display. To calculate the number simply divide 12 for the number of items per slide (e.g. 12/2 = 6)-->
-      <div class="carousel-item col-md-6 active">
-        <img class="img-fluid mx-auto d-block" src="//placehold.it/400x300?text=1" alt="slide 1">
-      </div>
-      <div class="carousel-item col-md-6">
-        <img class="img-fluid mx-auto d-block" src="//placehold.it/400x300?text=2" alt="slide 2">
-      </div>
-      <div class="carousel-item col-md-6">
-        <img class="img-fluid mx-auto d-block" src="//placehold.it/400x300?text=3" alt="slide 3">
-      </div>
-      <div class="carousel-item col-md-6">
-        <img class="img-fluid mx-auto d-block" src="//placehold.it/400x300?text=4" alt="slide 4">
-      </div>
-      <div class="carousel-item col-md-6">
-        <img class="img-fluid mx-auto d-block" src="//placehold.it/400x300?text=5" alt="slide 5">
-      </div>
-      <div class="carousel-item col-md-6">
-        <img class="img-fluid mx-auto d-block" src="//placehold.it/400x300?text=6" alt="slide 6">
-      </div>
-      <div class="carousel-item col-md-6">
-        <img class="img-fluid mx-auto d-block" src="//placehold.it/400x300?text=7" alt="slide 7">
-      </div>
-      <div class="carousel-item col-md-6">
-        <img class="img-fluid mx-auto d-block" src="//placehold.it/400x300?text=8" alt="slide 8">
+  <h1>Use Bootstrap 3's carousel to show multiple items per slide.</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="carousel slide multi-item-carousel" id="theCarousel">
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="col-xs-4"><a href="#1"><img src="https://source.unsplash.com/300x300/?perth,australia" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="https://source.unsplash.com/300x300/?fremantle,australia" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="https://source.unsplash.com/300x300/?west-australia" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="https://source.unsplash.com/300x300/?perth" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="https://source.unsplash.com/300x300/?quokka,perth" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="https://source.unsplash.com/300x300/?margaretriver,australia" class="img-responsive"></a></div>
+          </div>
+          <!-- add  more items here -->
+          <!-- Example item start:  -->
+          
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="https://source.unsplash.com/300x300/?perth,australia&r=7" class="img-responsive"></a></div>
+          </div>
+          
+          <!--  Example item end -->
+        </div>
+        <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#gallery" role="button" data-slide="prev">
-      <span class="arrow-left" aria-hidden="true"></span>
-    </a>
-    <a class="carousel-control-next" href="#gallery" role="button" data-slide="next">
-      <span class="arrow-right" aria-hidden="true"></span>
-    </a>
   </div>
 </div>
 

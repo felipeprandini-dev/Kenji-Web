@@ -1,79 +1,49 @@
-@media (min-width: 768px) {
-    $itemsPerSlide: 2; //put here the number of items per slide
-    $outerItemsPosition: -(100% /$itemsPerSlide);
+.multi-item-carousel{
+  .carousel-inner{
+    > .item{
+      transition: 500ms ease-in-out left;
+    }
+    .active{
+      &.left{
+        left:-33%;
+      }
+      &.right{
+        left:33%;
+      }
+    }
+    .next{
+      left: 33%;
+    }
+    .prev{
+      left: -33%;
+    }
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      > .item{
+        // use your favourite prefixer here
+        transition: 500ms ease-in-out left;
+        transition: 500ms ease-in-out all;
+        backface-visibility: visible;
+        transform: none!important;
+      }
+    }
+  }
+  .carouse-control{
+    &.left, &.right{
+      background-image: none;
+    }
+  }
+}
 
-    .carousel-inner{
-        /* show n items per slide */
-        .active,
-        .active + .carousel-item
-        //add the line above with an additional "+ .carousel-item " for each item you want add in one slide
-        {
-            display: block;
-        }
-        /* deactivate transitions on the n displayed items when left/right buttons are not activated*/
-     .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-     .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item 
-      //add the line above with an additional "+ .carousel-item " for each item you want add in one slide
-        {
-            transition: none;
-        }
-        /* remove movement from .active previous and next items */
-     .carousel-item-next,
-     .carousel-item-prev {
-          position: relative;
-          transform: translateX(0);
-        }
-        /*position the outside right item */
-     .active.carousel-item + .carousel-item + .carousel-item 
-      //add an additional "+ .carousel-item " for each item you want add in one slide
-        {
-            position: absolute;
-            right: $outerItemsPosition;
-            display: block;
-        }
-        /* position the outside left item */
-     .carousel-item-prev.carousel-item-right {
-            position: absolute;
-            left: $outerItemsPosition;
-            display: block;
-        }
-    }
-    /* move left */
-    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-    .carousel-item-next.carousel-item-left + .carousel-item 
-    //add the line above with an additional "+ .carousel-item " for each item you want add in one slide
-    {
-        transform: translateX(-100%);
-    }
-    /* move right */
-    .carousel-item-prev.carousel-item-right,
-    .carousel-item-prev.carousel-item-right + .carousel-item,
-    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item 
-  //add the line above with an additional "+ .carousel-item " for each item you want add in one slide
-    {
-        transform: translateX(100%);
-    }
+// non-related styling:
+body{
+  background: #333;
+  color: #ddd;
 }
-//custom arrow for controls
-.carousel-control-prev{
-    .arrow-left{
-        position:absolute;
-        left: -10%;
-        border:  solid #000;
-        border-width: 0 0 4px 4px;
-        transform: rotate(45deg);
-        display: inline-block;
-        padding: 10px;
-    }
-}
-.carousel-control-next{
-    .arrow-right{
-        position:absolute;
-        right: -10%;
-        border:  solid #000;
-        border-width: 0 4px 4px 0;
-        transform: rotate(-45deg);
-        display: inline-block;
-        padding: 10px;
-    }
+h1{
+  color: white;
+  font-size: 2.25em;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
 }
