@@ -15,7 +15,7 @@ $('#myCarousel').on('slide.bs.carousel', function (e) {
                 $('.carousel-item').eq(i).appendTo('.carousel-inner');
             }
             else {
-                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                $('.carousel-item').eq(0).appendTo('.carousel-inner'); 
             }
         }
     }
