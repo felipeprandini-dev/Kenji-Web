@@ -203,4 +203,4 @@ body{
 .fab button.main:active + ul li:hover label,
 .fab button.main:focus + ul li:hover label{
   opacity: 1;
-} 
+}  
