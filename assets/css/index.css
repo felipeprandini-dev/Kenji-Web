@@ -73,7 +73,7 @@ Attribution required
         visibility: visible;
     }
     
-    /* right or prev direction */
+    /* right or prev direction */ 
     .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
     .carousel-item-prev.carousel-item-right + .carousel-item,
     .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
