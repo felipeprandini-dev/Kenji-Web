@@ -17,7 +17,7 @@ $('#myCarousel').on('slide.bs.carousel', function (e) {
             }
         }
     }
-});
+}); 
 
 
 $('.carousel').on('touchstart', function(event){
