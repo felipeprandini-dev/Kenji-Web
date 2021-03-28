@@ -47,7 +47,7 @@ Attribution required
     .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
         position: relative;
         transform: translate3d(-100%, 0, 0);
-        visibility: visible; 
+        visibility: visible;  
     }
 
     /* farthest right hidden item must be abso position for animations */
