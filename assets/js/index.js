@@ -7,7 +7,7 @@ $(document).ready(function() {
           
               if (idx >= totalItems - (itemsPerSlide - 1)) {
                         var it = itemsPerSlide - (totalItems - idx);
-                        for (var i = 0; i < it; i++) { 
+                        for (var i = 0; i < it; i++) {
                                     // append slides to end
                                     if (e.direction == "left") {
                                                   $(".carousel-item")
