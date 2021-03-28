@@ -20,6 +20,7 @@ $(document).ready(function() {
                                     }
                         }
               }
+
       });
 var carouselLength = $('.carousel-item').length - 1;
 
@@ -35,7 +36,7 @@ $('.carousel').carousel({
     // First one
     if (e.to == 0) {
         $('.carousel-control-prev').addClass('d-none');
-        $('.carousel-control-next').removeClass('d-none');
+        $('.carousel-control-next').removeClass('d-none'); 
     } // Last one
     else if (e.to == carouselLength) {
         $('.carousel-control-prev').removeClass('d-none');
