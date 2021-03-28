@@ -488,7 +488,7 @@ body {
 }
 
 .fab button.main:before {
-    content: ' ';
+    content: '';
 }
 
 .fab ul {
@@ -543,7 +543,7 @@ body {
 
 .fab button.main:active:before,
 .fab button.main:focus:before {
-    content: ''; 
+    content: ''; 
 }
 
 .fab button.main:active+ul,
