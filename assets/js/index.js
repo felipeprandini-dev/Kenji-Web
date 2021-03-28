@@ -19,8 +19,7 @@ $('#myCarousel').on('slide.bs.carousel', function (e) {
     }
 });
 
-// see this new options for Bootstrap 4.3.1
-// https://www.codeply.com/go/zjZsn1ly29
+
 $('.carousel').on('touchstart', function(event){
     const xClick = event.originalEvent.touches[0].pageX;
     $(this).one('touchmove', function(event){
