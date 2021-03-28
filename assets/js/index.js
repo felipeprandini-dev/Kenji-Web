@@ -2,7 +2,7 @@
 // var carousel = new bootstrap.Carousel(myCarousel, {
 //   interval: 100000
 // })
-
+         
 $('.carousel .carousel-item').each(function(){
     var minPerSlide = 4;
     var next = $(this).next();

@@ -50,4 +50,4 @@ Attribution required
   .carousel-item-prev:not(.carousel-item-end) {
     transform: translateX(-25%) !important;
   }
-}
+} 
