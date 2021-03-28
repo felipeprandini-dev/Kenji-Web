@@ -56,6 +56,6 @@ $('.carousel').on('touchstart', function(event){
         }
     });
     $(this).on('touchend', function(){
-        $(this).off('touchmove');
+        $(this).off('touchmove'); 
     });
 });
