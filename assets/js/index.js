@@ -22,6 +22,7 @@ $(document).ready(function() {
               }
 
       });
+}      
 var carouselLength = $('.carousel-item').length - 1;
 
 // If there is more than one item
