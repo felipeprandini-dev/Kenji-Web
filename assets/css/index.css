@@ -488,7 +488,7 @@ body {
 }
 
 .fab button.main:before {
-    content: '';
+    content: ' ';
 }
 
 .fab ul {
@@ -560,4 +560,7 @@ body {
 .fab button.main:active+ul li:hover label,
 .fab button.main:focus+ul li:hover label {
     opacity: 1;
+}
+.fas fa-shopping-cart fa-lg{
+    z-index: -1
 }
