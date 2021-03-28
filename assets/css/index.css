@@ -487,9 +487,7 @@ body {
     z-index: 20;
 }
 
-.fab button.main:before {
-    content: '⏚';
-}
+
 
 .fab ul {
     position: absolute;
