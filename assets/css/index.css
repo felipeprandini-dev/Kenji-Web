@@ -481,6 +481,7 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 30px;
+    background-color: #5b19b7;
     right: 0;
     bottom: 0;
     z-index: 20;
