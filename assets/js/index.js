@@ -20,7 +20,7 @@ $('#myCarousel').on('slide.bs.carousel', function (e) {
         }
     }
 });
-
+ 
 $('.carousel').on('touchstart', function(event){
     const xClick = event.originalEvent.touches[0].pageX;
     $(this).one('touchmove', function(event){
