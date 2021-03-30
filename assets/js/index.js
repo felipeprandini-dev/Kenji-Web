@@ -1,4 +1,4 @@
-(function($) {
+/*(function($) {
     "use strict";
 
     // manual carousel controls
@@ -12,4 +12,4 @@
     $(".prev3").click(function(){ $("#postsCarousel3").carousel('prev');return false; });
     
 
-})(jQuery);
+})(jQuery);*/
