@@ -31,4 +31,4 @@ $("#carousel2").on('touchstart', function(event){
     $(this).on('touchend', function(){
         $(this).off('touchmove'); 
     });
-});*/
+});*/ 
